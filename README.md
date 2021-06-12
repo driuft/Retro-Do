@@ -24,7 +24,11 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+06/11/2021:
+
+<img src='https://github.com/driuft/SimpleTodo/blob/master/walkthrough-0611.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+11/18/2020:
 
 <img src='https://github.com/driuft/SimpleTodo/blob/master/walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
