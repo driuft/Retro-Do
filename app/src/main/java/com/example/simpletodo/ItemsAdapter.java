@@ -36,7 +36,7 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder>{
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // Use layout inflator to inflate the view
-        View todoView = LayoutInflater.from(parent.getContext()).inflate(android.R.layout.simple_list_item_1, parent, false);
+        View todoView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_todo, parent, false);
         // wrap it inside a View Holder and return it
         return new ViewHolder(todoView);
     }
@@ -60,15 +60,19 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder>{
     class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView tvItem;
+        TextView tvLineNumber;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            tvItem = itemView.findViewById(android.R.id.text1);
+            tvItem = itemView.findViewById(R.id.tvItem);
+            tvLineNumber = itemView.findViewById(R.id.tvLineNumber);
         }
 
         // Update the view inside of the view holder with this data
         public void bind(String item) {
             tvItem.setText(item);
+            int position = getAdapterPosition();
+            tvLineNumber.setText(Integer.toString(position + 1));
             tvItem.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
